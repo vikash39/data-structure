@@ -1,0 +1,33 @@
+
+Sort in C++ Standard Template Library (STL)
+
+Sorting is one of the most basic functions applied on data.
+The prototype for sort is :
+
+sort(startaddress, endaddress)
+
+
+#include<iostream>
+#include<algorithm>
+
+using namespace std;
+ int sortFunction(int a[]){
+     for(int i=0; i<10; i++){
+         cout<< '\t' <<a[i];
+     }
+ }
+ 
+ int main(){
+     int a[]={9,1,2,7,4,8,6,5,3,12};
+     
+     cout<<"Before sorting array"<<endl;
+     
+     //for(int i=0;i<10;i++){
+        // cout<<'\t'<<a[i];
+     //}
+     sortFunction(a);
+     cout<< endl;
+     cout<<"After sorting array"<<endl;
+     sort(a, a+10);
+     sortFunction(a);
+ }
